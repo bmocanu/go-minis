@@ -1,9 +1,8 @@
 package main
 
 import (
+	"errors"
 	"fmt"
-	"io/ioutil"
-	"net/http"
 	"os"
 	"strconv"
 )
@@ -22,12 +21,6 @@ Umbrella	☂	U+2602	&#9730;	Umbrella, rainy weather
 ❄	Snowflake	&#10052;
 */
 
-// Accuweather API for 5 days forecast
-// Param 1 = location key
-// Param 2 = API key
-// Param 3 = boolean, true=metric or false=imperial
-const accuweatherAPI5DaysForecast = "http://dataservice.accuweather.com/forecasts/v1/daily/5day/%s?apikey=%s&metric=%s"
-
 const weatherForecast = "☀ Sunny, small clouds / 13°C / 24°C"
 
 func main() {
@@ -37,28 +30,31 @@ func main() {
 		return
 	}
 
+	var awConfig AccuweatherConfig
+	awConfig.ApiKey = apiKey
+	awConfig.LocationKey = locationKey
+
+	aw5DaysForecast, err := Get5DaysForecast(awConfig, metric)
+	if err != nil {
+		fmt.Println("Error occurred while calling AccuWeather for the 5 days forecast", err)
+		return
+	}
+
+	fmt.Println(fmt.Sprintf("Forecast for tomorrow: %s / %s",
+		aw5DaysForecast.DailyForecasts[0].Temperature.Minimum.Value,
+		aw5DaysForecast.DailyForecasts[0].Temperature.Maximum.Value))
+
 	// fmt.Println(weatherForecast)
 	// os.Setenv("WEATHER_DAY1", weatherForecast)
-	retrieveWeatherData(apiKey, locationKey, metric)
 }
 
-func readCommandLineArgs() (*string, *string, *bool, *string) {
+func readCommandLineArgs() (string, string, bool, error) {
 	if len(os.Args) != 4 {
-		return nil, nil, nil, "Invalid nr of arguments. Call with: <apiKey> <locationKey> <true for metric, false for imperial>"
+		return "", "", false, errors.New("Invalid nr of arguments. Call with: <apiKey> <locationKey> <true for metric, false for imperial>")
 	}
 	var apiKey = os.Args[1]
 	var locationKey = os.Args[2]
 	var metric, _ = strconv.ParseBool(os.Args[3])
 
 	return apiKey, locationKey, metric, nil
-}
-
-func retrieveWeatherData(apiKey string, locationKey string, metric bool) {
-	response, err := http.Get(fmt.Sprintf(accuweatherAPI5DaysForecast, locationKey, apiKey, strconv.FormatBool(metric)))
-	if err != nil {
-		fmt.Println("Cannot call the Accuweather 5Days API", err)
-		return
-	}
-	data, _ := ioutil.ReadAll(response.Body)
-	fmt.Println("Success Accuweather API call: " + string(data))
 }
