@@ -1,0 +1,160 @@
+{
+  "Headline": {
+    "EffectiveDate": "2018-10-25T14:00:00+03:00",
+    "EffectiveEpochDate": 1540465200,
+    "Severity": 3,
+    "Text": "Expect showery weather Thursday afternoon through late Thursday night",
+    "Category": "rain",
+    "EndDate": "2018-10-26T08:00:00+03:00",
+    "EndEpochDate": 1540530000,
+    "MobileLink": "http://m.accuweather.com/en/ro/brasov/287345/extended-weather-forecast/287345?unit=c&lang=en-us",
+    "Link": "http://www.accuweather.com/en/ro/brasov/287345/daily-weather-forecast/287345?unit=c&lang=en-us"
+  },
+  "DailyForecasts": [
+    {
+      "Date": "2018-10-24T07:00:00+03:00",
+      "EpochDate": 1540353600,
+      "Temperature": {
+        "Minimum": {
+          "Value": 0.0,
+          "Unit": "C",
+          "UnitType": 17
+        },
+        "Maximum": {
+          "Value": 9.4,
+          "Unit": "C",
+          "UnitType": 17
+        }
+      },
+      "Day": {
+        "Icon": 12,
+        "IconPhrase": "Showers"
+      },
+      "Night": {
+        "Icon": 29,
+        "IconPhrase": "Rain and snow"
+      },
+      "Sources": [
+        "AccuWeather"
+      ],
+      "MobileLink": "http://m.accuweather.com/en/ro/brasov/287345/daily-weather-forecast/287345?unit=c&lang=en-us",
+      "Link": "http://www.accuweather.com/en/ro/brasov/287345/daily-weather-forecast/287345?unit=c&lang=en-us"
+    },
+    {
+      "Date": "2018-10-25T07:00:00+03:00",
+      "EpochDate": 1540440000,
+      "Temperature": {
+        "Minimum": {
+          "Value": 2.8,
+          "Unit": "C",
+          "UnitType": 17
+        },
+        "Maximum": {
+          "Value": 6.2,
+          "Unit": "C",
+          "UnitType": 17
+        }
+      },
+      "Day": {
+        "Icon": 14,
+        "IconPhrase": "Partly sunny w/ showers"
+      },
+      "Night": {
+        "Icon": 39,
+        "IconPhrase": "Partly cloudy w/ showers"
+      },
+      "Sources": [
+        "AccuWeather"
+      ],
+      "MobileLink": "http://m.accuweather.com/en/ro/brasov/287345/daily-weather-forecast/287345?day=1&unit=c&lang=en-us",
+      "Link": "http://www.accuweather.com/en/ro/brasov/287345/daily-weather-forecast/287345?day=1&unit=c&lang=en-us"
+    },
+    {
+      "Date": "2018-10-26T07:00:00+03:00",
+      "EpochDate": 1540526400,
+      "Temperature": {
+        "Minimum": {
+          "Value": 2.5,
+          "Unit": "C",
+          "UnitType": 17
+        },
+        "Maximum": {
+          "Value": 12.1,
+          "Unit": "C",
+          "UnitType": 17
+        }
+      },
+      "Day": {
+        "Icon": 4,
+        "IconPhrase": "Intermittent clouds"
+      },
+      "Night": {
+        "Icon": 35,
+        "IconPhrase": "Partly cloudy"
+      },
+      "Sources": [
+        "AccuWeather"
+      ],
+      "MobileLink": "http://m.accuweather.com/en/ro/brasov/287345/daily-weather-forecast/287345?day=2&unit=c&lang=en-us",
+      "Link": "http://www.accuweather.com/en/ro/brasov/287345/daily-weather-forecast/287345?day=2&unit=c&lang=en-us"
+    },
+    {
+      "Date": "2018-10-27T07:00:00+03:00",
+      "EpochDate": 1540612800,
+      "Temperature": {
+        "Minimum": {
+          "Value": 8.0,
+          "Unit": "C",
+          "UnitType": 17
+        },
+        "Maximum": {
+          "Value": 20.5,
+          "Unit": "C",
+          "UnitType": 17
+        }
+      },
+      "Day": {
+        "Icon": 3,
+        "IconPhrase": "Partly sunny"
+      },
+      "Night": {
+        "Icon": 35,
+        "IconPhrase": "Partly cloudy"
+      },
+      "Sources": [
+        "AccuWeather"
+      ],
+      "MobileLink": "http://m.accuweather.com/en/ro/brasov/287345/daily-weather-forecast/287345?day=3&unit=c&lang=en-us",
+      "Link": "http://www.accuweather.com/en/ro/brasov/287345/daily-weather-forecast/287345?day=3&unit=c&lang=en-us"
+    },
+    {
+      "Date": "2018-10-28T07:00:00+03:00",
+      "EpochDate": 1540699200,
+      "Temperature": {
+        "Minimum": {
+          "Value": 8.4,
+          "Unit": "C",
+          "UnitType": 17
+        },
+        "Maximum": {
+          "Value": 23.8,
+          "Unit": "C",
+          "UnitType": 17
+        }
+      },
+      "Day": {
+        "Icon": 3,
+        "IconPhrase": "Partly sunny"
+      },
+      "Night": {
+        "Icon": 35,
+        "IconPhrase": "Partly cloudy"
+      },
+      "Sources": [
+        "AccuWeather"
+      ],
+      "MobileLink": "http://m.accuweather.com/en/ro/brasov/287345/daily-weather-forecast/287345?day=4&unit=c&lang=en-us",
+      "Link": "http://www.accuweather.com/en/ro/brasov/287345/daily-weather-forecast/287345?day=4&unit=c&lang=en-us"
+    }
+  ]
+}
